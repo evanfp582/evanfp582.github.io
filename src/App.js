@@ -9,15 +9,19 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
+        </a> */}
+        <div className="bg-blue-500 text-white p-10">
+          <h1 className="text-4xl font-bold">Hello, Tailwind!</h1>
+          <p className="mt-4 text-lg">If you see this text with the blue background and white text, Tailwind is working!</p>
+        </div>
+          </header>
     </div>
   );
 }
