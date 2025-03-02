@@ -1,4 +1,3 @@
-// src/components/Projects.js
 import React from "react";
 import { Box, Typography } from "@mui/material";
 

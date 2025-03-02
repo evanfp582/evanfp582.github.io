@@ -1,7 +1,6 @@
-// src/App.js
 import React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline, Box } from "@mui/material";  // Global reset for consistent styling
+import { CssBaseline } from "@mui/material";
 import Navbar from "./components/Navbar";
 import Home from "./sections/Home";
 import Resume from "./sections/Resume";

@@ -1,8 +1,7 @@
-// src/components/Navbar.js
 import React from "react";
 import { AppBar, Toolbar, Button, Typography } from "@mui/material";
 import { Link } from "react-scroll";
-import { useTheme } from "@mui/material/styles"; // Import useTheme hook
+import { useTheme } from "@mui/material/styles";
 
 const Navbar = () => {
   const theme = useTheme();
