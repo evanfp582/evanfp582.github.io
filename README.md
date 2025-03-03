@@ -35,5 +35,6 @@ Add an interactive way for people to learn about the projects I have done
 
 ## Phase III
 Learn new tech for making rad looking websites
+- [ ] Make website work well with mobile
 - [ ] Add cool animation in home.js. I was thinking a faint binary hover background 
 - [ ] Add interesting way for users to view resume data
