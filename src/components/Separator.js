@@ -4,7 +4,7 @@ const Separator = ({ width = "95%" }) => {
 return (
   <Box
     sx={{
-      borderBottom: "2px solid rgb(224, 74, 61)", // Vermilion color
+      borderBottom: "2px solid rgb(194, 42, 39)", // Vermilion color
       width: width,
       margin: "auto",
     }}

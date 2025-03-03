@@ -15,47 +15,55 @@ const Home = () => {
         backgroundColor: "background.default",
         display: "flex",
         justifyContent: "center",
-        flexDirection: "column",
+        // flexDirection: "column",
         alignItems: "center",
         gap: 3,
-        mb: 4,
+        mb: 2,
       }}
     >
       <img
           src="/images/headshot.JPG"
           alt="headshot"
-          style={{ borderRadius: "50%", width: "250px", height: "250px", objectFit: "cover" }}
+          style={{ borderRadius: "50%", width: "300px", height: "300px", objectFit: "cover", border: "5px solid rgb(194, 42, 39)" }}
         />
-      <Box textAlign="center">
-        <Typography variant="h2" color="primary" sx={{ fontWeight: "bold" }}>
+      <Box 
+        textAlign="center"
+        sx={{
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
+        <Typography variant="h1" color="primary" sx={{ fontWeight: "bold" }}>
           Evan Fisher-Perez
         </Typography>
-        <Typography variant="h4" color="text.secondary" sx={{ mt: 0 }}>
+        <Typography variant="h3" color="text.secondary" sx={{ mt: 0 }}>
           Software Engineer!
         </Typography>
         <Separator width="100%" />
-      </Box>
-      <Box sx={{ mt: 0 }}>
-        <Box sx={{ display: "flex", justifyContent: "center", gap: 4 }}>
+        <Box sx={{ display: "flex", justifyContent: "center", gap: 12}}>
           <IconButton 
             href="https://github.com/evanfp582" 
             target="_blank" 
-            sx={{ color: "secondary.main" }}
+            sx={{ color: "text.secondary" }}
           >
-          <GitHubIcon />
+          <GitHubIcon sx={{fontSize: "4rem"}} />
         </IconButton>
-          {/* Email Link */}
           <IconButton 
             href="mailto:your.evanfp582@example.com" 
-            sx={{ color: "secondary.main" }}
+            sx={{ color: "text.secondary"}}
           >
-            <EmailIcon />
+            <EmailIcon sx={{fontSize: "4rem"}} />
           </IconButton>
-          <IconButton href="tel:+5704607285" sx={{ color: "secondary.main" }}>
-            <PhoneIcon />
+          <IconButton 
+            href="tel:+5704607285" 
+            sx={{ color: "text.secondary" }}
+          >
+            <PhoneIcon sx={{fontSize: "4rem"}} />
           </IconButton>
         </Box>
       </Box>
+      
     </Box>
   );
 };
