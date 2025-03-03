@@ -23,7 +23,7 @@ Make a website
 - [x] Make TODO list
 - [x] Establish design scheme
 - [x] Design Home sections
-- [ ] Design Resume sections
+- [x] Design Resume sections
 - [ ] Design Projects sections
 - [ ] Design About sections
 
@@ -36,3 +36,4 @@ Add an interactive way for people to learn about the projects I have done
 ## Phase III
 Learn new tech for making rad looking websites
 - [ ] Add cool animation in home.js. I was thinking a faint binary hover background 
+- [ ] Add interesting way for users to view resume data
