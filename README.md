@@ -10,30 +10,32 @@ Learn proper ways to make website
 Learn new technologies and cool things to do with web dev  
 
 ## Sections of Site
-- Home  
+- Home
+- About
 - Resume
 - Projects
-- About
 
 ## TODO
 Things I need to do, and I want to see what cool github markdown options there are
 
-## Phase I
+## Phase I Base
 Make a website
 - [x] Make TODO list
 - [x] Establish design scheme
 - [x] Design Home sections
 - [x] Design Resume sections
-- [ ] Design Projects sections
+- [x] Design Projects sections
 - [ ] Design About sections
 
-## Phase II
+## Phase II Learn about my projects
 Add an interactive way for people to learn about the projects I have done 
-- [ ] Add Project X
-- [ ] Add Project Y
-- [ ] Add Project Z
+- [ ] Add this project
+- [ ] Add image2JSON
+- [ ] Add play-thentication
+- [ ] Add todo_list_rust
+- [ ] Add Other projects that are actually good
 
-## Phase III
+## Phase III Make it look cool and do cool things
 Learn new tech for making rad looking websites
 - [ ] Make website work well with mobile
 - [ ] Add cool animation in home.js. I was thinking a faint binary hover background 
