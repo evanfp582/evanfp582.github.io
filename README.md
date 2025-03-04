@@ -25,7 +25,7 @@ Make a website
 - [x] Design Home sections
 - [x] Design Resume sections
 - [x] Design Projects sections
-- [ ] Design About sections
+- [x] Design About sections
 
 ## Phase II Learn about my projects
 Add an interactive way for people to learn about the projects I have done 
