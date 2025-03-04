@@ -1,8 +1,10 @@
 import React from "react";
-import { Box, Typography, Link, IconButton } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone"; // Import Phone Icon
+import PhoneIcon from "@mui/icons-material/Phone";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 
 import Separator from "../components/Separator";
 
@@ -47,8 +49,15 @@ const Home = () => {
             target="_blank" 
             sx={{ color: "text.secondary" }}
           >
-          <GitHubIcon sx={{fontSize: "4rem"}} />
-        </IconButton>
+            <GitHubIcon sx={{fontSize: "4rem"}} />
+          </IconButton>
+          <IconButton 
+            href="https://www.linkedin.com/in/evan-fisher-perez/" 
+            target="_blank" 
+            sx={{ color: "text.secondary" }}
+          >
+            <LinkedInIcon sx={{fontSize: "4rem"}} />
+          </IconButton>
           <IconButton 
             href="mailto:your.evanfp582@example.com" 
             sx={{ color: "text.secondary"}}

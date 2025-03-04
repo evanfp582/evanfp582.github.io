@@ -6,6 +6,7 @@ import Home from "./sections/Home";
 import Resume from "./sections/Resume";
 import Separator from "./components/Separator";
 import Projects from "./sections/Projects";
+import About from "./sections/About"
 
 // Define your custom color palette
 const theme = createTheme({
@@ -43,6 +44,8 @@ function App() {
       <CssBaseline /> {/*This applies the global reset */}
       <Navbar />
       <Home />
+      <Separator />
+      <About />
       <Separator />
       <Resume />
       <Separator />

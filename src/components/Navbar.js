@@ -10,11 +10,14 @@ const Navbar = () => {
     <AppBar position="sticky" color="primary">
       <Toolbar>
         <Typography variant="h2" color="text.header" sx={{ flexGrow: 1 }}>
-          My Portfolio
+          Portfolio
         </Typography>
         <div>
           <Link to="home" smooth={true} duration={500}>
             <Button sx={{ color: theme.palette.text.header}}>Home</Button>
+          </Link>
+          <Link to="about" smooth={true} duration={500}>
+            <Button sx={{ color: theme.palette.text.header}}>About</Button>
           </Link>
           <Link to="resume" smooth={true} duration={500}>
             <Button sx={{ color: theme.palette.text.header}}>Resume</Button>
