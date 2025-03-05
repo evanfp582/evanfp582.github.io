@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Button, Typography } from "@mui/material";
 import { Link } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const theme = useTheme();
