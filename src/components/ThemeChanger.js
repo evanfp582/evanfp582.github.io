@@ -13,7 +13,7 @@ const ThemeChanger = ({ setColor, color, text }) => {
 
   return (<>
   <Typography variant="h4"color="text.secondary" sx= {{fontWeight: "bold", textAlign: "center"}}>{text}</Typography>
-    <Box sx={{ marginTop: 2 }}>
+    <Box sx={{ marginTop: 2, width:"95%"}}>
       <Typography color="text.secondary">Red</Typography>
       <Slider
         onChange={(e, newValue) => handleSliderChange("r", newValue)}
@@ -23,7 +23,7 @@ const ThemeChanger = ({ setColor, color, text }) => {
         valueLabelDisplay="auto"
       />
     </Box>
-    <Box sx={{ marginTop: 2 }}>
+    <Box sx={{ marginTop: 2, width:"95%" }}>
       <Typography color="text.secondary">Green</Typography>
       <Slider
         onChange={(e, newValue) => handleSliderChange("g", newValue)}
@@ -33,7 +33,7 @@ const ThemeChanger = ({ setColor, color, text }) => {
         valueLabelDisplay="auto"
       />
     </Box>
-    <Box sx={{ marginTop: 2 }}>
+    <Box sx={{ marginTop: 2, width:"95%" }}>
       <Typography color="text.secondary">Blue</Typography>
       <Slider
         onChange={(e, newValue) => handleSliderChange("b", newValue)}

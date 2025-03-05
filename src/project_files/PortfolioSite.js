@@ -5,7 +5,14 @@ import ThemeChanger from "../components/ThemeChanger";
 
 
 const PortfolioSite = () => {
-  const { setPrimaryColor, primaryColor } = useContext(ThemeContext);
+  const { 
+    setPrimaryColor, primaryColor, 
+    setSecondaryColor, secondaryColor, 
+    setTextColor, textColor, 
+    setSecondaryTextColor, secondaryTextColor,
+    setBackgroundColor, backgroundColor,
+    setPaperColor, paperColor
+  } = useContext(ThemeContext);
 
   return(<>
     <Box
@@ -41,23 +48,47 @@ const PortfolioSite = () => {
         </Typography>
       <Grid container spacing={2}>
         <Grid item xs={3}>
-          <Paper sx={{ padding: 2 }}>
+          <Paper>
             <ThemeChanger setColor={setPrimaryColor} color={primaryColor} text={"Primary"} />
           </Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper sx={{ padding: 2}}>
-            <ThemeChanger setColor={setPrimaryColor} color={primaryColor} text={"Secondary"} />
+          <Paper>
+            <ThemeChanger setColor={setSecondaryColor} color={secondaryColor} text={"Secondary"} />
           </Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper sx={{ padding: 2 }}>
-            <ThemeChanger setColor={setPrimaryColor} color={primaryColor} text={"Header"} />
+          <Paper>
+            <ThemeChanger setColor={setTextColor} color={textColor} text={"Navbar Text"} />
           </Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper sx={{ padding: 2 }}>
-            <ThemeChanger setColor={setPrimaryColor} color={primaryColor} text={"Background"} />
+          <Paper>
+            <ThemeChanger setColor={setBackgroundColor} color={backgroundColor} text={"Background"} />
+          </Paper>
+        </Grid>
+      </Grid>
+
+
+      <Grid container spacing={2} sx={{ mt: 5 }}>
+        <Grid item xs={3}>
+          <Paper>
+            <ThemeChanger setColor={setSecondaryTextColor} color={secondaryTextColor} text={"Body Text"} />
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper>
+            <ThemeChanger setColor={setPaperColor} color={secondaryColor} text={"Paper"} />
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper>
+            <ThemeChanger setColor={setTextColor} color={textColor} text={"Empty"} />
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper>
+            <ThemeChanger setColor={setBackgroundColor} color={backgroundColor} text={"Empty"} />
           </Paper>
         </Grid>
       </Grid>

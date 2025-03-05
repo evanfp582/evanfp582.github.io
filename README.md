@@ -29,7 +29,7 @@ Make a website
 
 ## Phase II Learn about my projects
 Add an interactive way for people to learn about the projects I have done 
-- [ ] Add this project
+- [ ] Add this project WIP
 - [ ] Add image2JSON
 - [ ] Add play-thentication
 - [ ] Add todo_list_rust
@@ -40,3 +40,9 @@ Learn new tech for making rad looking websites
 - [ ] Make website work well with mobile
 - [ ] Add cool animation in home.js. I was thinking a faint binary hover background 
 - [ ] Add interesting way for users to view resume data
+
+## Known Bugs
+- [ ] When changing theme in interactive demo, theme vanishes
+
+## Design Thoughts
+Is there a better way of displaying text in the interactive portfolio website

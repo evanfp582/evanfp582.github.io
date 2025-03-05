@@ -15,8 +15,22 @@ import PortfolioSite from "./project_files/PortfolioSite";
 
 export const ThemeContext = createContext();
 
+const initialTheme = {
+  primaryColor: { r: 198, g: 40, b: 40 },
+  secondaryColor: { r: 239, g: 108, b: 0 },
+  textColor: { r: 238, g: 238, b: 238 },
+  secondaryTextColor: { r: 97, g: 97, b: 97 },
+  backgroundColor: { r: 238, g: 238, b: 238 },
+  paperColor: {r: 224, g: 224, b: 224}
+}
+
 function App() {
-  const [primaryColor, setPrimaryColor] = useState({ r: 198, g: 40, b: 40 });
+  const [primaryColor, setPrimaryColor] = useState(initialTheme.primaryColor);
+  const [secondaryColor, setSecondaryColor] = useState(initialTheme.secondaryColor);
+  const [textColor, setTextColor] = useState(initialTheme.textColor);
+  const [secondaryTextColor, setSecondaryTextColor] = useState(initialTheme.secondaryTextColor);
+  const [backgroundColor, setBackgroundColor] = useState(initialTheme.backgroundColor);
+  const [paperColor, setPaperColor] = useState(initialTheme.paperColor)
 
   const theme = createTheme({
     palette: {
@@ -25,10 +39,11 @@ function App() {
         main: `rgb(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b})`,
       },
       secondary: {
-        main: "#ef6c00",
+        main: `rgb(${secondaryColor.r}, ${secondaryColor.g}, ${secondaryColor.b})`,
       },
       text: {
-        header: "#eeeeee"
+        header: `rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`,
+        secondary: `rgb(${secondaryTextColor.r}, ${secondaryTextColor.g}, ${secondaryTextColor.b})`,
       },
       error: {
         main: "#9c9c9c",
@@ -37,8 +52,8 @@ function App() {
         main: "#e8df56",
       },
       background: {
-        default: "#eeeeee",
-        paper: "#e0e0e0",
+        default: `rgb(${backgroundColor.r}, ${backgroundColor.g}, ${backgroundColor.b})`,
+        paper: `rgb(${paperColor.r}, ${paperColor.g}, ${paperColor.b})`,
       },
     },
     typography: {
@@ -47,7 +62,14 @@ function App() {
   });
 
   return (
-    <ThemeContext.Provider value={{ setPrimaryColor, primaryColor }}>
+    <ThemeContext.Provider value={{ 
+      setPrimaryColor, primaryColor,
+      setSecondaryColor, secondaryColor,
+      setTextColor, textColor,
+      setSecondaryTextColor, secondaryTextColor,
+      setBackgroundColor, backgroundColor,
+      setPaperColor, paperColor
+    }}>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline /> {/*This applies the global reset */}
