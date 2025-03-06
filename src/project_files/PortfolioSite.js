@@ -1,10 +1,8 @@
 import { Box, Paper, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-
 import { ThemeContext } from "../App"
 import React, { useContext } from "react";
 import ThemeChanger from "../components/ThemeChanger";
-
 
 const PortfolioSite = () => {
   const { 
@@ -23,7 +21,7 @@ const PortfolioSite = () => {
         minHeight: "100vh",
         backgroundColor: "background.default",
         gap: 3,
-        mb: 2,
+        mb: 2
       }}
     >
       <Box textAlign="center">

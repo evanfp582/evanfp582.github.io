@@ -5,7 +5,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-
 import Separator from "../components/Separator";
 
 const Home = () => {
@@ -17,10 +16,9 @@ const Home = () => {
         backgroundColor: "background.default",
         display: "flex",
         justifyContent: "center",
-        // flexDirection: "column",
         alignItems: "center",
         gap: 3,
-        mb: 2,
+        mb: 2
       }}
     >
       <img
@@ -72,7 +70,6 @@ const Home = () => {
           </IconButton>
         </Box>
       </Box>
-      
     </Box>
   );
 };

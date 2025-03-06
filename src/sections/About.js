@@ -8,7 +8,6 @@ const About = () => {
     return currentYear - 2012;
   }
 
-
   return (
     <Box
       id="about"
@@ -17,10 +16,8 @@ const About = () => {
         backgroundColor: "background.default",
         display: "flex",
         flexDirection: "column",
-        // justifyContent: "center",
         alignItems: "center",
-        // textAlign: "center",
-        padding: "2rem",
+        padding: "2rem"
       }}
     >
       <Typography variant="h2" color="primary" sx={{ fontWeight: "bold", mb: 4 }}>

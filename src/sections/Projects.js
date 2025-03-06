@@ -59,39 +59,38 @@ const projects = [
     "name": "evanfp582.github.io", 
     "description": "Hay, that's this here",
     "link": "https://github.com/evanfp582/evanfp582.github.io",
-    "project_link": "/portfolio_website"
+    "project_link": "/#/portfolio_website"
   },
   {
     "name": "BartenderWebsite", 
     "description": "A Bartender Website using MERN stack that can recommend drinks depending on a user's available ingredients. Web scraping stuff is written in Python and was used to initially fill up the database with recipes.",
     "link": "https://github.com/ryanmurf9/BartenderWebsite",
-    "project_link": "/BartenderWebsite"
+    "project_link": "/#/BartenderWebsite"
   },
   {
     "name": "Image2JSON", 
     "description": "Brickhack X Project to turn images into JSON objects",
     "link": "https://github.com/evanfp582/Image2JSON",
-    "project_link": "/Image2JSON"
+    "project_link": "/#/Image2JSON"
   },
   {
     "name": "play-thentication", 
     "description": "Brickhack 11 Project to authenticate users by playing a silly game",
     "link": "https://github.com/evanfp582/play-thentication",
-    "project_link": "/play-thentication"
+    "project_link": "/#/play-thentication"
   },
   {
     "name": "DiscordBots", 
     "description": "Playing around with Discord SDK",
     "link": "https://github.com/evanfp582/DiscordBots",
-    "project_link": "/DiscordBots"
+    "project_link": "/#/DiscordBots"
   },
   {
     "name": "todo_list_rust", 
     "description": "Learning rust by making a todo list",
     "link": "https://github.com/evanfp582/todo_list_rust",
-    "project_link": "/todo_list_rust"
+    "project_link": "/#/todo_list_rust"
   },
 ]
-
 
 export default Projects;

@@ -1,7 +1,8 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom"; // Import HashRouter instead of BrowserRouter
 import { CssBaseline } from "@mui/material";
+
 import Navbar from "./components/Navbar";
 import Home from "./sections/Home";
 import Resume from "./sections/Resume";
@@ -9,9 +10,6 @@ import Separator from "./components/Separator";
 import Projects from "./sections/Projects";
 import About from "./sections/About"
 import PortfolioSite from "./project_files/PortfolioSite";
-
-// Define your custom color palette
-
 
 export const ThemeContext = createContext();
 
@@ -70,9 +68,9 @@ function App() {
       setBackgroundColor, backgroundColor,
       setPaperColor, paperColor
     }}>
-      <BrowserRouter>
+      <HashRouter>
         <ThemeProvider theme={theme}>
-          <CssBaseline /> {/*This applies the global reset */}
+          <CssBaseline />
           <Routes>
             <Route path="/" element={<>
               <Navbar />
@@ -93,7 +91,7 @@ function App() {
             } />
           </Routes>
         </ThemeProvider>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeContext.Provider>
   );
 }
