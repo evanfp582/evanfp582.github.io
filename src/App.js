@@ -10,6 +10,7 @@ import Separator from "./components/Separator";
 import Projects from "./sections/Projects";
 import About from "./sections/About"
 import PortfolioSite from "./project_files/PortfolioSite";
+import Image2Json from "./project_files/Image2Json";
 
 export const ThemeContext = createContext();
 
@@ -87,6 +88,11 @@ function App() {
             <Route path="/portfolio_website" element={<>
             <Navbar /> 
             <PortfolioSite />
+            </>
+            } />
+            <Route path="/image2JSON" element={<>
+            <Navbar /> 
+            <Image2Json />
             </>
             } />
           </Routes>

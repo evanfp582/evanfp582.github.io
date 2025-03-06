@@ -57,7 +57,7 @@ const Projects = () => {
 const projects = [
   {
     "name": "evanfp582.github.io", 
-    "description": "Hay, that's this here",
+    "description": "This project here. An interractive and fun website to teach people about myself and my projects",
     "link": "https://github.com/evanfp582/evanfp582.github.io",
     "project_link": "/#/portfolio_website"
   },
