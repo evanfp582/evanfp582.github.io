@@ -2,6 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Button, Typography } from "@mui/material";
 import { Link } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -13,18 +14,18 @@ const Navbar = () => {
           Portfolio
         </Typography>
         <div>
-          <Link to="home" smooth={true} duration={500}>
+          <HashLink to="/#home" smooth={true} duration={500}>
             <Button sx={{ color: theme.palette.text.header}}>Home</Button>
-          </Link>
-          <Link to="about" smooth={true} duration={500}>
+          </HashLink>
+          <HashLink to="/#about" smooth={true} duration={500}>
             <Button sx={{ color: theme.palette.text.header}}>About</Button>
-          </Link>
-          <Link to="resume" smooth={true} duration={500}>
+          </HashLink>
+          <HashLink to="/#resume" smooth={true} duration={500}>
             <Button sx={{ color: theme.palette.text.header}}>Resume</Button>
-          </Link>
-          <Link to="projects" smooth={true} duration={500}>
+          </HashLink>
+          <HashLink to="/#projects" smooth={true} duration={500}>
             <Button sx={{ color: theme.palette.text.header}}>Projects</Button>
-          </Link>
+          </HashLink>
         </div>
       </Toolbar>
     </AppBar>
