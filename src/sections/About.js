@@ -64,7 +64,7 @@ const About = () => {
             <span style={{ fontWeight: "bold" }}>Board Games</span>:
             I have an expansive board game collection that I love to play with friends. One of the best parts of going to college in Rochester NY, was being in close proximity to the best store of all time, Millennium Games.<br />
             <span style={{ fontWeight: "bold" }}>Reading</span>:
-            My library is also something I am increasingly proud of as I build. Since the start of college I"ve gotten really into reading all the classics. The Jungle by Upton Sinclair and Lord of the Rings by J.R.R. Tolkien.<br />
+            My library is also something I am increasingly proud of as I build. Since the start of college I"ve gotten really into reading all the classics. The Jungle by Upton Sinclair and Lord of the Rings by J.R.R. Tolkien are among my favorite books.<br />
             <span style={{ fontWeight: "bold" }}>Video Games</span>:
             I would not be a proper CS student if I was not into video games. Video games have always been a good source of relaxation and stimulation. Games like Factorio, Dota, and Terraria are my favorites.<br />          
           </Typography>

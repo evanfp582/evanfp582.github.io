@@ -1,4 +1,6 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
+
 import { ThemeContext } from "../App"
 import React, { useContext } from "react";
 import ThemeChanger from "../components/ThemeChanger";
@@ -20,9 +22,6 @@ const PortfolioSite = () => {
       sx={{
         minHeight: "100vh",
         backgroundColor: "background.default",
-        justifyContent: "center",
-        flexDirection: "column",
-        alignItems: "center",
         gap: 3,
         mb: 2,
       }}
@@ -35,18 +34,21 @@ const PortfolioSite = () => {
           Called evanfp582.github.io
         </Typography>
       </Box>
-      <Typography variant="h3" color="secondary">Design</Typography>
-      <Typography color="text.secondary" sx={{ mt: 1, fontSize: "20px"}}>
-        For this site, I wanted to emphasis design and making a cool looking website that I would be proud of <br />
-        I used tools like <a href="https://coolors.co/">Coolors</a> and <a href="https://zenoo.github.io/mui-theme-creator/">MUI Theme Creator</a> to make visually appealing website <br />
-        I went with Red as a the primary color because I like the color red. <br />
-        I Used orange to show some pride to my alma mater, the RIT Tigers.
-      </Typography>
-
-      <Typography variant="h3" color="primary" sx={{ mt: 5 }}>
+      <Box sx={{ padding: "2rem" }}>
+        <Typography variant="h3" color="secondary">Design</Typography>
+        <Typography color="text.secondary" sx={{ mt: 1, fontSize: "20px"}}>
+          For this site, I wanted to emphasis design and making a cool looking website that I would be proud of <br />
+          I used tools like <a href="https://coolors.co/">Coolors</a> and <a href="https://zenoo.github.io/mui-theme-creator/">MUI Theme Creator</a> to make visually appealing website <br />
+          I went with Red as a the primary color because I like the color red. <br />
+          I Used orange to show some pride to my alma mater, the RIT Tigers.
+        </Typography>
+      </Box>
+      <Box textAlign= "center">
+        <Typography variant="h3" color="primary" sx={{ mt: 5, fontWeight: "bold" }}>
           Try some color design yourself!
         </Typography>
-      <Grid container spacing={2}>
+      </Box>
+      <Grid container spacing={2} sx = {{ alignItems: "center", margin: "auto"}}>
         <Grid item xs={3}>
           <Paper>
             <ThemeChanger setColor={setPrimaryColor} color={primaryColor} text={"Primary"} />
@@ -67,10 +69,7 @@ const PortfolioSite = () => {
             <ThemeChanger setColor={setBackgroundColor} color={backgroundColor} text={"Background"} />
           </Paper>
         </Grid>
-      </Grid>
 
-
-      <Grid container spacing={2} sx={{ mt: 5 }}>
         <Grid item xs={3}>
           <Paper>
             <ThemeChanger setColor={setSecondaryTextColor} color={secondaryTextColor} text={"Body Text"} />
@@ -78,22 +77,21 @@ const PortfolioSite = () => {
         </Grid>
         <Grid item xs={3}>
           <Paper>
-            <ThemeChanger setColor={setPaperColor} color={secondaryColor} text={"Paper"} />
+            <ThemeChanger setColor={setPaperColor} color={paperColor} text={"Paper"} />
           </Paper>
         </Grid>
         <Grid item xs={3}>
           <Paper>
-            <ThemeChanger setColor={setTextColor} color={textColor} text={"Empty"} />
+            {/* <ThemeChanger setColor={setTextColor} color={textColor} text={"Empty"} /> */}
           </Paper>
         </Grid>
         <Grid item xs={3}>
           <Paper>
-            <ThemeChanger setColor={setBackgroundColor} color={backgroundColor} text={"Empty"} />
+            {/* <ThemeChanger setColor={setBackgroundColor} color={backgroundColor} text={"Empty"} /> */}
           </Paper>
         </Grid>
       </Grid>
     </Box>
-    
   </>)
 }
 

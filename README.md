@@ -29,7 +29,7 @@ Make a website
 
 ## Phase II Learn about my projects
 Add an interactive way for people to learn about the projects I have done 
-- [ ] Add this project WIP
+- [x] Add this project
 - [ ] Add image2JSON
 - [ ] Add play-thentication
 - [ ] Add todo_list_rust
