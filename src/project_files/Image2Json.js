@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Stepper from "@mui/material/Stepper";
@@ -23,29 +23,56 @@ const steps = [
   {
     label: "Computer Vision to Split into Sections",
     image: "/images/sectioned.PNG",
-    description:
-      `Using computer vision (OpenCV) the original 3 recipes has been reduced to one.
-      Furthermore, the one recipe has been split up into chunks based on whitespace between text.`,
+    description: `Using computer vision (OpenCV) the original 3 recipes has been reduced to one.
+                  Furthermore, the one recipe has been split up into chunks based on whitespace between text.`,
   },
   {
-    label: "Title The Sections Via Commandline",
+    label: "Title the Sections Using Commandline",
     image: "/images/input.PNG",
     description: `Next we go back to the command line and label the sections numbered in the photo.
                   These will be the keys of the JSON object we create.`,
   },
   {
-    label: "String Output",
-    image: "/images/next_output.PNG",
-    description: `Wait what is this? 
+    label: "JSON Output",
+    image: "/images/JSON_output1.PNG",
+    description: `Look at this! This is the JSON object generated using the image we provided and with the section titles we declared
+                  There are notable errors in the text and this will be addressed below in the "Known Issues" sections`,
+  },
+  {
+    label: "JSON Output 2?",
+    image: "/images/JSON_output2.PNG",
+    description: `Wait what is this?
                   Looking back at the original image, we can see that both the Peeping Tomboy and Traction have the same layout. 
                   Since they have the same layout, the program can guess that the title of the sections will be the same.
                   This is where the timesaving comes in. Using the number of sections, the order of sections, and the size of sections we can infer data is laid out similarly`,
+  },
+  {
+    label: "New Section",
+    image: "/images/sectioned2.PNG",
+    description: `After inputting the section titles and see the JSON output, a new pop-up appears. Now we see the Sherry Cobbler (the 3rd and leftmost recipe on the page).
+                  This is show because this recipe appears to be in a different format. It has another paragraph in the recipe. 
+                  It adds a whole paragraph after the flavor text dedicated to the garnish`,
+  },
+  {
+    label: "Title the New Sections Using Commandline",
+    image: "/images/input2.PNG",
+    description: `Once again we label the fields including the new "garnish_text" field`,
+  },
+  {
+    label: "JSON Output",
+    image: "/images/JSON_output3.PNG",
+    description: `Horary! Once again we have a cluster of JSON and now with the new field`,
+  },
+  {
+    label: "Finished",
+    description: `Now you have a bunch of JSON data from images. My example only used one image, but you can use a whole book's worth of recipes.
+                  My original use case was to then import these JSON objects into a Mongo Database, but it can be used for anything!`,
   },
 ];
 
 const Image2Json = () => {
 
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -53,10 +80,6 @@ const Image2Json = () => {
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
   };
 
   return (<>
@@ -104,19 +127,20 @@ const Image2Json = () => {
                 <Typography color="text.secondary" sx={{ fontSize: "20px", fontWeight: "bold" }}>{step.label}</Typography>
               </StepLabel>
               <StepContent>
-                <img
+                {step.image && <img
                   src={step.image}
                   alt="step_image"
-                  style={{width: "300px", height: "300px"}}
-                />
-                <Typography color="text.secondary" sx={{ fontSize: "20px"}}>{step.description}</Typography>
+                  class="h-[600px] w-auto"
+                />}
+                {step.description && <Typography color="text.secondary" sx={{ fontSize: "20px"}}>{step.description}</Typography>}
                 <Box sx={{ mb: 2 }}>
                   <Button
                     variant="contained"
                     onClick={handleNext}
+                    disabled={index === steps.length-1}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === steps.length - 1 ? "Finish" : "Continue"}
+                    Continue
                   </Button>
                   <Button
                     disabled={index === 0}
@@ -130,14 +154,6 @@ const Image2Json = () => {
             </Step>
           ))}
         </Stepper>
-        {activeStep === steps.length && (
-          <Paper square elevation={0} sx={{ p: 3 }}>
-            <Typography>All steps completed - you are finished</Typography>
-            <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-              Reset
-            </Button>
-          </Paper>
-        )}
       </Box>
   </>)
 }
