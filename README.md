@@ -44,6 +44,7 @@ Learn new tech for making rad looking websites
 ## Known Bugs
 - [ ] When changing theme in interactive demo, theme vanishes
 - [ ] Fix links to look distinctive and add more internal links 
+- [ ] When linking to another page in website, goes to bottom of page
 
 ## Design Thoughts
 Is there a better way of displaying text in the interactive portfolio website
