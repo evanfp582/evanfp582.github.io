@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Stepper from "@mui/material/Stepper";
@@ -6,10 +6,6 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Unstable_Grid2";
-import { IconButton } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import Separator from "../components/Separator"
 
@@ -175,7 +171,7 @@ const Image2Json = () => {
         </Typography>
         <Typography variant="h4" color="secondary">Arrays</Typography>
         <Typography color="text.secondary" sx={{ fontSize: "20px"}}>
-          This is an issue with parsing the actual "recipe" section of the recipe. This is a small issue that I think could be easily fixed with just some regex.
+          This is an issue with parsing the actual "recipe" section of the recipe. Even if you select array, it is just a string. This is a small issue that I think could be easily fixed with just some regex.
         </Typography>
       </Box>
   </>)

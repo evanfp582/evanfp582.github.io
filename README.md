@@ -31,6 +31,7 @@ Make a website
 Add an interactive way for people to learn about the projects I have done 
 - [x] Add this project
 - [x] Add image2JSON
+- [x] Add Bartender Website
 - [ ] Add play-thentication
 - [ ] Add todo_list_rust
 - [ ] Add Other projects that are actually good
