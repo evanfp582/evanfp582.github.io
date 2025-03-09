@@ -5,7 +5,7 @@ import "./Button.css";
 const Button = ({ onUp, onDown, onLeft, onRight }) => {
     return (
         <div className="buttons">
-            <div className="upwards">
+            {/* <div className="upwards">
                 <input className="up" onClick={onUp} type="button" value="UP" />
             </div>
             <div className="sideways">
@@ -29,7 +29,7 @@ const Button = ({ onUp, onDown, onLeft, onRight }) => {
                     type="button"
                     value="DOWN"
                 />
-            </div>
+            </div> */}
         </div>
     );
 };

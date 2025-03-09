@@ -121,8 +121,8 @@ const Image2Json = () => {
       </Typography>
     </Box>
     <Box sx={{ paddingLeft: "4rem" }}>
-    <Typography variant="h4" color="secondary">Example Execution</Typography>
-      <Stepper activeStep={activeStep} orientation="vertical">
+      <Typography variant="h4" color="secondary">Example Execution</Typography>
+        <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((step, index) => (
             <Step key={step.label}>
               <StepLabel>
