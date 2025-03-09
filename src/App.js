@@ -13,6 +13,7 @@ import PortfolioSite from "./project_files/PortfolioSite";
 import Image2Json from "./project_files/Image2Json";
 import BartenderWebsite from "./project_files/BartenderWebsite";
 import Footer from "./components/Footer";
+import Playthentication from "./project_files/Playthentication";
 
 export const ThemeContext = createContext();
 
@@ -102,6 +103,12 @@ function App() {
             <Route path="/image2JSON" element={<>
               <Navbar /> 
               <Image2Json />
+              <Footer />
+              </>
+            } />
+            <Route path="/Playthentication" element={<>
+              <Navbar /> 
+              <Playthentication />
               <Footer />
               </>
             } />

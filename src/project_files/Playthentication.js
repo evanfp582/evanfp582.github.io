@@ -2,13 +2,15 @@ import { useState } from "react";
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 
+import Game from "../snake/Game"
 import Separator from "../components/Separator"
 
-const BartenderWebsite = () => {
+const Playthentication = () => {
+
   return (<>
     <Box textAlign="center">
       <Typography variant="h1" color="primary" sx={{ fontWeight: "bold" }}>
-          Bartender Website 
+          Play-thentication 
       </Typography>
       <Separator width="50%"/>
     </Box>
@@ -26,10 +28,10 @@ const BartenderWebsite = () => {
         Back end: Express JS and Mongoose with a Mongo database.
       </Typography>
       <Typography variant="h3" color="secondary">
-       Future
+        Future
       </Typography>
       <Typography color="text.secondary" sx={{ mt: 1, mb:3, fontSize: "20px"}}>
-        Some of the features I mentioned above were never functional. <br />
+        All of the features I mentioned above were never functional. <br />
         In terms of new features, I'd love to have a mobile app to go with the website. This app would alow an at-home bartender to host a party where people can order off a cocktail list.<br />
         Finally I would love to actually host this project, perhaps using my own web hosting.
       </Typography>
@@ -42,23 +44,17 @@ const BartenderWebsite = () => {
         display: "flex",
       }}>
       <Typography variant="h2" color="primary" sx={{ fontWeight: "bold" }}>
-          Screenshot
+          Example
       </Typography>
       <Separator width="50%"/>
-      <Box sx = {{border: '2px solid black', mt: "1rem"}}>
-        <img
-          src="/images/bartender_website.PNG"
-          alt="website screenshot"
-          class="h-[600px] w-auto"
-        />
-      </Box>
+      <Typography>https://www.geeksforgeeks.org/create-a-snake-game-in-react/</Typography>
+      <Game />
     </Box>
     <Typography color="text.secondary" sx={{ fontSize: "20px", paddingLeft: "4rem"}}>
       As you can see, I like red
     </Typography>
-    
+
   </>)
 }
 
-
-export default BartenderWebsite
+export default Playthentication
