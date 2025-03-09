@@ -158,6 +158,7 @@ class App extends Component {
 
     gameOver() {
         alert(`GAME OVER, your score is ${this.state.snakeDots.length - 2}\n Keystrokes: ${this.state.keyStrokes}`);
+        this.props.setAuthString(this.state.keyStrokes);
         this.setState(initialState);
     }
 
@@ -227,12 +228,6 @@ class App extends Component {
                             <Snake snakeDots={snakeDots} />
                             <Food dot={food} />
                         </div>
-                        <Button
-                            onDown={this.onDown}
-                            onLeft={this.onLeft}
-                            onRight={this.onRight}
-                            onUp={this.onUp}
-                        />
                     </div>
                 )}
             </div>

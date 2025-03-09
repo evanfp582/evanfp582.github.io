@@ -7,24 +7,15 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import StepContent from "@mui/material/StepContent";
 
-
 import Game from "../snake/Game"
 import Separator from "../components/Separator"
 import Login from "../components/Login";
-
-// const steps = ['Login', 'Play the Game', 'The Resulting Password'];
-
-// const steps = [
-//   {label: "Login", component: <Login />},
-//   {label: "Play the Game", component: <Game />},
-//   {label: "Result", component: <Typography> Meow </Typography>},
-// ]
-
 
 const Playthentication = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [authString, setAuthString] = useState("");
 
   const handleNext = () => {
     if (activeStep === steps.length - 1){
@@ -51,13 +42,15 @@ const Playthentication = () => {
       onNext={handleNext}
     />},
     {label: "Play the Game", component:<>
-      <Game />
+      <Game setAuthString={setAuthString}/>
       <Typography color="text.secondary" sx={{ fontSize: "20px", paddingLeft: "4rem"}}>
         Snake Source: https://www.geeksforgeeks.org/create-a-snake-game-in-react/ <br />
         This is a game of snake that I took from GeeksforGeeks and modified so it is no longer random and it records your key strokes
       </Typography>
       </>},
-    {label: "Result", component: <p>{password}</p>},
+    {label: "Result", component: <Typography>
+      Resulting keystrokes are appended to your password: {password}{authString}
+      </Typography>},
   ]
 
   return (<>
