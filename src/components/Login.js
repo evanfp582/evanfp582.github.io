@@ -1,57 +1,35 @@
-import React, { useState } from "react";
-import { Button, TextField, Box, Typography, Container } from "@mui/material";
+import React from "react";
+import { TextField, Box, Button } from "@mui/material";
 
-const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Username:", username);
-    console.log("Password:", password);
-  };
-
+const Login = ({ username, setUsername, password, setPassword, onNext }) => {
   return (
-    <Box
-      component="form"
-      onSubmit={handleSubmit}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        gap: 2,
-        p: 4,
-      }}
-      // className="w-full max-w-md"
-    >
-      <Typography variant="h5" align="center" gutterBottom>
-        Login
-      </Typography>
-
+    <Box>
       <TextField
         label="Username"
         variant="outlined"
+        fullWidth
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        required
+        sx={{ mb: 2 }}
       />
-
       <TextField
         label="Password"
         type="password"
         variant="outlined"
+        fullWidth
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        required
+        sx={{ mb: 2 }}
       />
-
-      <Button
-        type="submit"
-        variant="contained"
-        color="primary"
-        sx={{ mt: 2 }}
-      >
-        Submit
-      </Button>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Button
+          variant="contained"
+          onClick={onNext}
+          disabled={!username || !password}
+        >
+          Next
+        </Button>
+      </Box>
     </Box>
   );
 };

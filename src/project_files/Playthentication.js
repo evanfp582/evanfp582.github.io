@@ -26,19 +26,6 @@ const Playthentication = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  
-  const steps = [
-    {label: "Login", component: <Login />},
-    {label: "Play the Game", component:<>
-      <Game />
-      <Typography color="text.secondary" sx={{ fontSize: "20px", paddingLeft: "4rem"}}>
-        Snake Source: https://www.geeksforgeeks.org/create-a-snake-game-in-react/ <br />
-        This is a game of snake that I took from GeeksforGeeks and modified so it is no longer random and it records your key strokes
-      </Typography>
-      </>},
-    {label: "Result", component: <p>test</p>},
-  ]
-
   const handleNext = () => {
     if (activeStep === steps.length - 1){
       handleReset()
@@ -54,6 +41,24 @@ const Playthentication = () => {
   const handleReset = () => {
     setActiveStep(0);
   };
+
+  const steps = [
+    {label: "Login", component: <Login
+      username={username}
+      setUsername={setUsername}
+      password={password}
+      setPassword={setPassword}
+      onNext={handleNext}
+    />},
+    {label: "Play the Game", component:<>
+      <Game />
+      <Typography color="text.secondary" sx={{ fontSize: "20px", paddingLeft: "4rem"}}>
+        Snake Source: https://www.geeksforgeeks.org/create-a-snake-game-in-react/ <br />
+        This is a game of snake that I took from GeeksforGeeks and modified so it is no longer random and it records your key strokes
+      </Typography>
+      </>},
+    {label: "Result", component: <p>{password}</p>},
+  ]
 
   return (<>
     <Box textAlign="center">
