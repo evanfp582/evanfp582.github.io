@@ -31,7 +31,8 @@ Make a website
 Add an interactive way for people to learn about the projects I have done 
 - [x] Add this project
 - [x] Add image2JSON
-- [ ] Add play-thentication
+- [x] Add Bartender Website
+- [x] Add play-thentication
 - [ ] Add todo_list_rust
 - [ ] Add Other projects that are actually good
 
@@ -44,6 +45,10 @@ Learn new tech for making rad looking websites
 ## Known Bugs
 - [ ] When changing theme in interactive demo, theme vanishes
 - [ ] Fix links to look distinctive and add more internal links 
+- [ ] When linking to another page in website, goes to bottom of page
+- [ ] In play-thentication, if leave login stepper, can't go back without input being blocked
+- [ ] In play-thentication, fix the stepper so it does not look bad
+
 
 ## Design Thoughts
 Is there a better way of displaying text in the interactive portfolio website

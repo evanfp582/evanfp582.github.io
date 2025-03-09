@@ -77,7 +77,7 @@ const projects = [
     "name": "play-thentication", 
     "description": "Brickhack 11 Project to authenticate users by playing a silly game",
     "link": "https://github.com/evanfp582/play-thentication",
-    "project_link": "/#/play-thentication"
+    "project_link": "/#/Playthentication"
   },
   {
     "name": "DiscordBots", 

@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { HashRouter, Routes, Route } from "react-router-dom"; // Import HashRouter instead of BrowserRouter
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, AppBar, Toolbar } from "@mui/material";
 
 import Navbar from "./components/Navbar";
 import Home from "./sections/Home";
@@ -11,6 +11,9 @@ import Projects from "./sections/Projects";
 import About from "./sections/About"
 import PortfolioSite from "./project_files/PortfolioSite";
 import Image2Json from "./project_files/Image2Json";
+import BartenderWebsite from "./project_files/BartenderWebsite";
+import Footer from "./components/Footer";
+import Playthentication from "./project_files/Playthentication";
 
 export const ThemeContext = createContext();
 
@@ -82,18 +85,32 @@ function App() {
               <Resume />
               <Separator />
               <Projects />
-              <Separator />
+              <Footer />
               </>
             } />
             <Route path="/portfolio_website" element={<>
-            <Navbar /> 
-            <PortfolioSite />
-            </>
+              <Navbar /> 
+              <PortfolioSite />
+              <Footer />
+              </>
+            } />
+            <Route path="/BartenderWebsite" element={<>
+              <Navbar /> 
+              <BartenderWebsite />
+              <Footer />
+              </>
             } />
             <Route path="/image2JSON" element={<>
-            <Navbar /> 
-            <Image2Json />
-            </>
+              <Navbar /> 
+              <Image2Json />
+              <Footer />
+              </>
+            } />
+            <Route path="/Playthentication" element={<>
+              <Navbar /> 
+              <Playthentication />
+              <Footer />
+              </>
             } />
           </Routes>
         </ThemeProvider>
