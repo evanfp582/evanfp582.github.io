@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
+import BubbleText from "../components/bubble_text/BubbleText"
 import Separator from "../components/Separator";
 
 const Home = () => {
@@ -30,7 +31,7 @@ const Home = () => {
         className="rounded-full border-4 border-red-600 object-cover"
         style={{
           width: "100%",
-          maxWidth: "200px",
+          maxWidth: "300px",
           height: "auto",
         }}
       />
@@ -41,20 +42,7 @@ const Home = () => {
           alignItems: "center",
         }}
       >
-        <Typography 
-          variant="h3" 
-          color="primary" 
-          sx={{ fontWeight: "bold", fontSize: { xs: "1.5rem", md: "3rem" } }}
-        >
-          Evan Fisher-Perez
-        </Typography>
-        <Typography 
-          variant="h5" 
-          color="text.secondary" 
-          sx={{ mt: 1, fontSize: { xs: "1rem", md: "2rem" } }}
-        >
-          Software Engineer!
-        </Typography>
+        <BubbleText />
         <Separator width="100%" />
         <Box sx={{ display: "flex", justifyContent: "center", gap: { xs: 3, md: 12 }, mt: 2 }}>
           <IconButton 

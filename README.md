@@ -40,11 +40,11 @@ Add an interactive way for people to learn about the projects I have done
 ## Phase III Make it look cool and do cool things
 Learn new tech for making rad looking websites
 - [x] Make website work well with mobile
-- [ ] Add cool animation in home.js. I was thinking a faint binary hover background 
+- [x] Add cool animation in home.js. I was thinking a faint binary hover background 
 - [ ] Add interesting way for users to view resume data
 
 ## Known Bugs
-- [ ] When changing theme in interactive demo, theme vanishes
+- [x] When changing theme in interactive demo, theme vanishes
 - [ ] Fix links to look distinctive and add more internal links 
 - [ ] When linking to another page in website, goes to bottom of page
 - [ ] In play-thentication, if leave login stepper, can't go back without input being blocked
