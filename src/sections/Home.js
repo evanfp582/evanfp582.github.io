@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useRef } from "react";
 import { Box, IconButton } from "@mui/material";
+import { motion, useInView } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -25,7 +26,10 @@ const Home = () => {
       }}
       className="p-4"
     >
-      <img
+      <motion.img
+        initial={{y:25, opacity:0}}
+        animate={{y:0, opacity:1}}
+        transition={{duration:1, ease:"easeInOut"}}
         src="/images/headshot.JPG"
         alt="headshot"
         className="rounded-full border-4 border-red-600 object-cover"
@@ -35,6 +39,11 @@ const Home = () => {
           height: "auto",
         }}
       />
+      <motion.div
+        initial={{y:25, opacity:0}}
+        animate={{y:0, opacity:1}}
+        transition={{duration:1, ease:"easeInOut"}}
+      >
       <Box
         sx={{
           display: "flex",
@@ -73,6 +82,9 @@ const Home = () => {
           </IconButton>
         </Box>
       </Box>
+      </motion.div>
+      
+      
     </Box>
   );
 };

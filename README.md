@@ -46,9 +46,9 @@ Learn new tech for making rad looking websites
 ## Known Bugs
 - [x] When changing theme in interactive demo, theme vanishes
 - [ ] Fix links to look distinctive and add more internal links 
-- [ ] When linking to another page in website, goes to bottom of page
+- [x] When linking to another page in website, goes to bottom of page
 - [ ] In play-thentication, if leave login stepper, can't go back without input being blocked
-- [ ] In play-thentication, fix the stepper so it does not look bad
+- [x] In play-thentication, fix the stepper so it does not look bad
 
 
 ## Design Thoughts
