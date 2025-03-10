@@ -28,7 +28,6 @@ const Navbar = () => {
         </Typography>
 
         {isMobile ? (
-          // Hamburger menu for mobile screens
           <>
             <IconButton
               edge="end"
@@ -51,7 +50,6 @@ const Navbar = () => {
             </Drawer>
           </>
         ) : (
-          // Regular navbar for larger screens
           <div>
             {navItems.map((item) => (
               <HashLink key={item.to} to={item.to} smooth={true} duration={500} style={{ textDecoration: "none" }}>

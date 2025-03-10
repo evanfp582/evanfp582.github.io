@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { HashRouter, Routes, Route } from "react-router-dom"; // Import HashRouter instead of BrowserRouter
 import { CssBaseline, AppBar, Toolbar } from "@mui/material";
 
+
 import Navbar from "./components/Navbar";
 import Home from "./sections/Home";
 import Resume from "./sections/Resume";
@@ -16,6 +17,7 @@ import Footer from "./components/Footer";
 import Playthentication from "./project_files/Playthentication";
 import DiscordBots from "./project_files/DiscordBots";
 import TodoListRust from "./project_files/TodoListRust";
+import FadeInSection from "./components/FadeInSection";
 
 export const ThemeContext = createContext();
 
@@ -82,47 +84,65 @@ function App() {
               <Navbar />
               <Home />
               <Separator />
-              <About />
-              <Separator />
-              <Resume />
-              <Separator />
-              <Projects />
-              <Footer />
+              <FadeInSection>
+                <About />
+                <Separator />
+              </FadeInSection>
+              <FadeInSection>
+                <Resume />
+                <Separator />
+              </FadeInSection>
+              <FadeInSection>
+                <Projects />
+                <Footer />
+              </FadeInSection>
               </>
             } />
             <Route path="/portfolio_website" element={<>
               <Navbar /> 
-              <PortfolioSite />
+              <FadeInSection>
+                <PortfolioSite />
+              </FadeInSection>
               <Footer />
               </>
             } />
             <Route path="/BartenderWebsite" element={<>
               <Navbar /> 
-              <BartenderWebsite />
+              <FadeInSection>
+                <BartenderWebsite />
+              </FadeInSection>
               <Footer />
               </>
             } />
             <Route path="/image2JSON" element={<>
               <Navbar /> 
-              <Image2Json />
+              <FadeInSection>
+                <Image2Json />
+              </FadeInSection>
               <Footer />
               </>
             } />
             <Route path="/Playthentication" element={<>
               <Navbar /> 
-              <Playthentication />
+              <FadeInSection>
+                <Playthentication />
+              </FadeInSection>
               <Footer />
               </>
             } />
             <Route path="/DiscordBots" element={<>
               <Navbar /> 
-              <DiscordBots />
+              <FadeInSection>
+                <DiscordBots />
+              </FadeInSection>
               <Footer />
               </>
             } />
             <Route path="/TodoListRust" element={<>
               <Navbar /> 
-              <TodoListRust />
+              <FadeInSection>
+                <TodoListRust />
+              </FadeInSection>
               <Footer />
               </>
             } />

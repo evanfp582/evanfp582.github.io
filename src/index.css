@@ -57,3 +57,8 @@ code {
   border-radius: 20px;
   z-index: 1;
 }
+
+a {
+  color: #4918fd;
+  text-decoration: underline;
+}

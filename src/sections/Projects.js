@@ -40,6 +40,7 @@ const Projects = () => {
                   variant="contained" 
                   color="primary" 
                   href={project.project_link}
+                  onClick={() => window.scrollTo(0, 0)}
                   sx = {{width:"50%"}}
                 >
                   Interactive Demo
