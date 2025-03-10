@@ -66,6 +66,10 @@ const steps = [
   },
 ];
 
+const bodyStyle = { fontSize: { xs: "1rem", md: "1.25rem" }, textAlign: "justify" }
+const h1Style = { fontWeight: "bold", fontSize: { xs: "3.5rem", md: "5.5rem" } }
+const paddingLeftStyle = { px: { xs: 3, sm: 6, md: 10 }, py: 4 }
+
 const Image2Json = () => {
 
   const [activeStep, setActiveStep] = useState(0);
@@ -79,68 +83,64 @@ const Image2Json = () => {
   };
 
   return (<>
-    <Box textAlign="center">
-      <Typography variant="h1" color="primary" sx={{ fontWeight: "bold" }}>
+    <Box textAlign="center" sx={paddingLeftStyle}>
+      <Typography color="primary" sx={h1Style}>
           Image2Json 
       </Typography>
       <Separator width="50%"/>
     </Box>
-    <Box sx={{ padding: "4rem" }}>
+    <Box sx={paddingLeftStyle}>
       <Typography variant="h3" color="secondary">Description</Typography>
-      <Typography color="text.secondary" sx={{ mt: 1, mb:3, fontSize: "20px"}}>
+      <Typography color="text.secondary" sx={bodyStyle}>
         This was a project I did with a partner for Brickhack X, RIT's Annual 24 hour hackathon <br />
         The idea is that given an input of images of text, the user can create massive amount of JSON given that the text blobs are in similar forms. <br />
         I wanted to make this because it went along with my Cocktail Website project. I have physical cocktail recipe books and I wanted to add them to my cocktail database that I was building for that project.
         Honestly one my favorite projects I worked on and I see myself coming back to this project <br />
       </Typography>
       <Typography variant="h3" color="secondary">Tech</Typography>
-      <Typography color="text.secondary" sx={{ mt: 1, mb:3, fontSize: "20px"}}>
+      <Typography color="text.secondary" sx={bodyStyle}>
         Written in python, using the computer vision library of OpenCV and the Optical Character Recognition tool pytesseract
       </Typography>
       <Typography variant="h3" color="secondary">
        The Future
       </Typography>
-      <Typography color="text.secondary" sx={{ mt: 1, mb:3, fontSize: "20px"}}>
+      <Typography color="text.secondary" sx={bodyStyle}>
         I want to fix the issues mentioned in "The Problems" section below. If I successfully get passed that, I think this concept has some real promise. <br />
         Data processing is a massive field and the combination of computer vision and JSON is an under utilized possibility
       </Typography>
     </Box>
-    <Box sx={{ paddingLeft: "4rem" }}>
-      <Typography variant="h2" textAlign="center" color="primary" sx={{ fontWeight: "bold" }}>
+    <Box sx={paddingLeftStyle}>
+      <Typography textAlign="center" color="primary" sx={h1Style}>
         Demo 
       </Typography>
       <Separator width="50%"/>
       <Typography variant="h4" color="secondary">Mock Situation</Typography>
-      <Typography color="text.secondary" sx={{ fontSize: "20px"}}>
+      <Typography color="text.secondary" sx={bodyStyle}>
         You want to add a whole bunch of cocktail recipes to a database <br />
         You do not want to manually input potentially thousands of recipes 
       </Typography>
       <Typography variant="h4" color="secondary">Gear Needed</Typography>
-      <Typography color="text.secondary" sx={{ fontSize: "20px"}}>
+      <Typography color="text.secondary" sx={bodyStyle}>
         Just a cocktail recipe book and a camera
       </Typography>
     </Box>
-    <Box sx={{ paddingLeft: "4rem" }}>
+    <Box sx={paddingLeftStyle}>
       <Typography variant="h4" color="secondary">Example Execution</Typography>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((step, index) => (
             <Step key={step.label}>
               <StepLabel>
-                <Typography color="text.secondary" sx={{ fontSize: "20px", fontWeight: "bold" }}>{step.label}</Typography>
+                <Typography color="text.secondary" sx={bodyStyle}>{step.label}</Typography>
               </StepLabel>
               <StepContent>
-                {step.image && <img
-                  src={step.image}
-                  alt="step_image"
-                  class="h-[600px] w-auto"
-                />}
-                {step.description && <Typography color="text.secondary" sx={{ fontSize: "20px"}}>{step.description}</Typography>}
-                <Box sx={{ mb: 2 }}>
+              {step.image && <img src={step.image} alt="step_image" style={{ width: "100%", maxHeight: "50vh", objectFit: "contain" }} />}
+                {step.description && <Typography color="text.secondary" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" } }}>{step.description}</Typography>}
+                <Box sx={{ mt: 2 }}>
                   <Button
                     variant="contained"
                     onClick={handleNext}
                     disabled={index === steps.length-1}
-                    sx={{ mt: 1, mr: 1 }}
+                    sx={{ mr: 1 }}
                   >
                     Continue
                   </Button>
@@ -157,20 +157,20 @@ const Image2Json = () => {
           ))}
         </Stepper>
       </Box>
-      <Box sx={{ paddingLeft: "4rem" }}>
-        <Typography variant="h2" textAlign="center" color="primary" sx={{ fontWeight: "bold" }}>
+      <Box sx={paddingLeftStyle}>
+        <Typography variant="h2" textAlign="center" color="primary" sx={h1Style}>
           The Problems 
         </Typography>
         <Separator width="50%"/>
         <Typography variant="h4" color="secondary">The OCR with Symbols and Fractions</Typography>
-        <Typography color="text.secondary" sx={{ fontSize: "20px"}}>
+        <Typography color="text.secondary" sx={bodyStyle}>
           This is the biggest issue that exists in the program right now. This is the issue that caused me stress from midnight to noon in Brickhack X. <br />
           The Optical Character Recognition tool I used (pytesseract) had a really hard time with fractions. Fractions are really common in recipes (especially cocktail recipes). <br />
           This is why in all the recipes you see with wacky symbols or numbers that don't make sense. I spent many hours during my hackathon trying to manually train pytesseract to understand fractions. <br />
           This problem is not including the problem the OCR tool has with just a black line. This is why 'Peeping Tomboy' is saved as 'Peeping Tomboy' a {`-3/4au<=`}.
         </Typography>
         <Typography variant="h4" color="secondary">Arrays</Typography>
-        <Typography color="text.secondary" sx={{ fontSize: "20px"}}>
+        <Typography color="text.secondary" sx={bodyStyle}>
           This is an issue with parsing the actual "recipe" section of the recipe. Even if you select array, it is just a string. This is a small issue that I think could be easily fixed with just some regex.
         </Typography>
       </Box>

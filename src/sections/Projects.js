@@ -62,12 +62,6 @@ const projects = [
     "project_link": "/#/portfolio_website"
   },
   {
-    "name": "BartenderWebsite", 
-    "description": "A Bartender Website using MERN stack that can recommend drinks depending on a user's available ingredients. Web scraping stuff is written in Python and was used to initially fill up the database with recipes.",
-    "link": "https://github.com/ryanmurf9/BartenderWebsite",
-    "project_link": "/#/BartenderWebsite"
-  },
-  {
     "name": "Image2JSON", 
     "description": "Brickhack X Project to turn images into JSON objects",
     "link": "https://github.com/evanfp582/Image2JSON",
@@ -80,6 +74,12 @@ const projects = [
     "project_link": "/#/Playthentication"
   },
   {
+    "name": "BartenderWebsite", 
+    "description": "A Bartender Website using MERN stack that can recommend drinks depending on a user's available ingredients. Web scraping stuff is written in Python and was used to initially fill up the database with recipes.",
+    "link": "https://github.com/ryanmurf9/BartenderWebsite",
+    "project_link": "/#/BartenderWebsite"
+  },
+  {
     "name": "DiscordBots", 
     "description": "Playing around with Discord SDK",
     "link": "https://github.com/evanfp582/DiscordBots",
@@ -89,7 +89,7 @@ const projects = [
     "name": "todo_list_rust", 
     "description": "Learning rust by making a todo list",
     "link": "https://github.com/evanfp582/todo_list_rust",
-    "project_link": "/#/todo_list_rust"
+    "project_link": "/#/TodoListRust"
   },
 ]
 

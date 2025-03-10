@@ -1,6 +1,6 @@
 import { Box, Paper, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import { ThemeContext } from "../App"
+import { ThemeContext } from "../App";
 import React, { useContext } from "react";
 import ThemeChanger from "../components/ThemeChanger";
 
@@ -14,83 +14,86 @@ const PortfolioSite = () => {
     setPaperColor, paperColor
   } = useContext(ThemeContext);
 
-  return(<>
-    <Box
-      id="home"
-      sx={{
-        minHeight: "100vh",
-        backgroundColor: "background.default",
-        gap: 3,
-        mb: 2
-      }}
-    >
-      <Box textAlign="center">
-        <Typography variant="h1" color="primary" sx={{ fontWeight: "bold" }}>
+  return (
+    <>
+      <Box
+        id="home"
+        sx={{
+          minHeight: "100vh",
+          backgroundColor: "background.default",
+          gap: 3,
+          mb: 2,
+          textAlign: "center", // Centers content on smaller screens
+          px: { xs: 2, md: 4 }, // Adjust horizontal padding for small screens
+        }}
+      >
+        {/* Title Section */}
+        <Typography 
+          variant="h3" 
+          color="primary" 
+          sx={{ fontWeight: "bold", fontSize: { xs: "1.8rem", md: "3rem" } }}
+        >
           Portfolio Website 
         </Typography>
-        <Typography variant="h3" color="text.secondary">
+        <Typography 
+          variant="h5" 
+          color="text.secondary" 
+          sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
+        >
           Called evanfp582.github.io
         </Typography>
-      </Box>
-      <Box sx={{ padding: "2rem" }}>
-        <Typography variant="h3" color="secondary">Design</Typography>
-        <Typography color="text.secondary" sx={{ mt: 1, fontSize: "20px"}}>
-          For this site, I wanted to emphasis design and making a cool looking website that I would be proud of <br />
-          I used tools like <a href="https://coolors.co/">Coolors</a> and <a href="https://zenoo.github.io/mui-theme-creator/">MUI Theme Creator</a> to make visually appealing website <br />
-          I went with Red as a the primary color because I like the color red. <br />
-          I Used orange to show some pride to my alma mater, the RIT Tigers.
-        </Typography>
-      </Box>
-      <Box textAlign= "center">
-        <Typography variant="h3" color="primary" sx={{ mt: 5, fontWeight: "bold" }}>
+
+        {/* Design Section */}
+        <Box sx={{ p: { xs: "1rem", md: "2rem" } }}>
+          <Typography variant="h4" color="secondary" sx={{ fontSize: { xs: "1.5rem", md: "2rem" } }}>
+            Design
+          </Typography>
+          <Typography color="text.secondary" sx={{ mt: 1, fontSize: { xs: "16px", md: "20px" } }}>
+            For this site, I wanted to emphasize design and creating a website I'd be proud of. <br />
+            I used tools like <a href="https://coolors.co/">Coolors</a> and <a href="https://zenoo.github.io/mui-theme-creator/">MUI Theme Creator</a> for visual appeal. <br />
+            I chose red as the primary color because I like red, and orange to represent my alma mater, the RIT Tigers.
+          </Typography>
+        </Box>
+
+        {/* Theme Changer Section */}
+        <Typography 
+          variant="h4" 
+          color="primary" 
+          sx={{ mt: 4, fontWeight: "bold", fontSize: { xs: "1.5rem", md: "2rem" } }}
+        >
           Try some color design yourself!
         </Typography>
+
+        {/* Grid Layout for Theme Changer */}
+        <Grid 
+          container 
+          spacing={2} 
+          sx={{ 
+            alignItems: "center", 
+            justifyContent: "center", 
+            margin: "auto",
+            maxWidth: "900px",
+            px: { xs: 2, md: 0 } // Reduce padding on mobile
+          }}
+        >
+          {[
+            { setColor: setPrimaryColor, color: primaryColor, text: "Primary" },
+            { setColor: setSecondaryColor, color: secondaryColor, text: "Secondary" },
+            { setColor: setTextColor, color: textColor, text: "Navbar Text" },
+            { setColor: setBackgroundColor, color: backgroundColor, text: "Background" },
+            { setColor: setSecondaryTextColor, color: secondaryTextColor, text: "Body Text" },
+            { setColor: setPaperColor, color: paperColor, text: "Paper" },
+          ].map((item, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index}>
+              <Paper sx={{ p: 2 }}>
+                <ThemeChanger setColor={item.setColor} color={item.color} text={item.text} />
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
-      <Grid container spacing={2} sx = {{ alignItems: "center", margin: "auto"}}>
-        <Grid item xs={3}>
-          <Paper>
-            <ThemeChanger setColor={setPrimaryColor} color={primaryColor} text={"Primary"} />
-          </Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper>
-            <ThemeChanger setColor={setSecondaryColor} color={secondaryColor} text={"Secondary"} />
-          </Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper>
-            <ThemeChanger setColor={setTextColor} color={textColor} text={"Navbar Text"} />
-          </Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper>
-            <ThemeChanger setColor={setBackgroundColor} color={backgroundColor} text={"Background"} />
-          </Paper>
-        </Grid>
+    </>
+  );
+};
 
-        <Grid item xs={3}>
-          <Paper>
-            <ThemeChanger setColor={setSecondaryTextColor} color={secondaryTextColor} text={"Body Text"} />
-          </Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper>
-            <ThemeChanger setColor={setPaperColor} color={paperColor} text={"Paper"} />
-          </Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper>
-            {/* <ThemeChanger setColor={setTextColor} color={textColor} text={"Empty"} /> */}
-          </Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper>
-            {/* <ThemeChanger setColor={setBackgroundColor} color={backgroundColor} text={"Empty"} /> */}
-          </Paper>
-        </Grid>
-      </Grid>
-    </Box>
-  </>)
-}
-
-export default PortfolioSite
+export default PortfolioSite;

@@ -14,6 +14,8 @@ import Image2Json from "./project_files/Image2Json";
 import BartenderWebsite from "./project_files/BartenderWebsite";
 import Footer from "./components/Footer";
 import Playthentication from "./project_files/Playthentication";
+import DiscordBots from "./project_files/DiscordBots";
+import TodoListRust from "./project_files/TodoListRust";
 
 export const ThemeContext = createContext();
 
@@ -109,6 +111,18 @@ function App() {
             <Route path="/Playthentication" element={<>
               <Navbar /> 
               <Playthentication />
+              <Footer />
+              </>
+            } />
+            <Route path="/DiscordBots" element={<>
+              <Navbar /> 
+              <DiscordBots />
+              <Footer />
+              </>
+            } />
+            <Route path="/TodoListRust" element={<>
+              <Navbar /> 
+              <TodoListRust />
               <Footer />
               </>
             } />

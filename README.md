@@ -33,12 +33,13 @@ Add an interactive way for people to learn about the projects I have done
 - [x] Add image2JSON
 - [x] Add Bartender Website
 - [x] Add play-thentication
-- [ ] Add todo_list_rust
+- [x] Add todo_list_rust
+- [x] Add Discord Bots
 - [ ] Add Other projects that are actually good
 
 ## Phase III Make it look cool and do cool things
 Learn new tech for making rad looking websites
-- [ ] Make website work well with mobile
+- [x] Make website work well with mobile
 - [ ] Add cool animation in home.js. I was thinking a faint binary hover background 
 - [ ] Add interesting way for users to view resume data
 
