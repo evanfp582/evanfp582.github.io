@@ -72,20 +72,20 @@ const Playthentication = () => {
         A teammate and I created a website where in order to authenticate yourself as a user, you need to login and then play a game. <br />
         The first time you log in, the way you play the game will be recorded and you will need to play it the same exact way each time to log in. <br />
         We chose to make this because: <br />
-          1. it is silly <br />
+          1. It is silly <br />
           2. We both have an interest in cybersecurity <br /> 
           3. We wanted to meet the prize tracks for "Best use of Auth0", "Best Remix Hack", and "Best Domain Name" <br />
       </Typography>
       <Typography variant="h3" color="secondary">Tech</Typography>
       <Typography color="text.secondary" sx={bodyStyle}>
-        React JS, Java (for the game), and Auth0"s authentication platform. <br />
+        React JS, Java (for the game), and Auth0's authentication platform. <br />
       </Typography>
       <Typography variant="h3" color="secondary">
         Future
       </Typography>
       <Typography color="text.secondary" sx={bodyStyle}>
         We never got Auth0 to play nice with what we wanted to do. Turns out the secure authentication platform does not like a little fun. <br />
-        While there is likely not a future for this project, if/when I make a public web service that requires authenticated users, I will probably use Auth0
+        While there is likely not a future for this project, if/when I make a public web service that requires authenticated users, I will probably use Auth0.
       </Typography>
     </Box>
     <Box

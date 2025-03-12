@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 
@@ -21,7 +20,7 @@ const BartenderWebsite = () => {
       <Typography color="text.secondary" sx={bodyStyle}>
         This is a website front end where you can browse cocktail recipes, create a user, have a "shelf" that contains what ingredients you have, and see what drinks you can make. <br />
         The user would also be able ot make and public their own recipes and create lists of cocktails for organization purposes. <br />
-        paired with a MongoDB backend that contains users, ingredients, recipes, user"s shelves, and every cocktail recipe. <br />
+        paired with a MongoDB that contains users, ingredients, recipes, user's shelves, and every cocktail recipe. <br />
         This was a project I did with a friend who also had a passion for making cocktails. <br />
       </Typography>
       <Typography variant="h3" color="secondary">Tech</Typography>
@@ -34,7 +33,7 @@ const BartenderWebsite = () => {
       </Typography>
       <Typography color="text.secondary" sx={bodyStyle}>
         Some of the features I mentioned above were never functional. <br />
-        In terms of new features, I"d love to have a mobile app to go with the website. This app would alow an at-home bartender to host a party where people can order off a cocktail list.<br />
+        In terms of new features, I'd love to have a mobile app to go with the website. This app would alow an at-home bartender to host a party where people can order off a cocktail list.<br />
         Finally I would love to actually host this project, perhaps using my own web hosting.
       </Typography>
     </Box>
@@ -68,7 +67,6 @@ const BartenderWebsite = () => {
     <Typography color="text.secondary" sx={bodyStyle, paddingLeftStyle}>
       As you can see, I like red
     </Typography>
-    
   </>)
 }
 

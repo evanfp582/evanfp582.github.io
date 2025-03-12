@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { HashRouter, Routes, Route } from "react-router-dom"; // Import HashRouter instead of BrowserRouter
-import { CssBaseline, AppBar, Toolbar } from "@mui/material";
+import { CssBaseline } from "@mui/material";
 
 
 import Navbar from "./components/Navbar";

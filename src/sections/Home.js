@@ -1,6 +1,6 @@
-import React, {useRef } from "react";
+import React from "react";
 import { Box, IconButton } from "@mui/material";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -69,7 +69,7 @@ const Home = () => {
             <LinkedInIcon sx={{ fontSize: { xs: "2.5rem", md: "4rem" } }} />
           </IconButton>
           <IconButton 
-            href="mailto:your.evanfp582@example.com" 
+            href="mailto:your.evanfp582@gmail.com" 
             sx={{ color: "text.secondary"}}
           >
             <EmailIcon sx={{ fontSize: { xs: "2.5rem", md: "4rem" } }} />

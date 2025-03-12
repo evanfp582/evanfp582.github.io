@@ -6,8 +6,8 @@ import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md")); // Detect mobile screens
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+  const [drawerOpen, setDrawerOpen] = useState(false)
 
   const navItems = [
     { label: "Home", to: "/#home" },

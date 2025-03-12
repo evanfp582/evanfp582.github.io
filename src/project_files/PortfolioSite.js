@@ -23,11 +23,10 @@ const PortfolioSite = () => {
           backgroundColor: "background.default",
           gap: 3,
           mb: 2,
-          textAlign: "center", // Centers content on smaller screens
-          px: { xs: 2, md: 4 }, // Adjust horizontal padding for small screens
+          textAlign: "center",
+          px: { xs: 2, md: 4 },
         }}
       >
-        {/* Title Section */}
         <Typography 
           variant="h3" 
           color="primary" 
@@ -43,7 +42,6 @@ const PortfolioSite = () => {
           Called evanfp582.github.io
         </Typography>
 
-        {/* Design Section */}
         <Box sx={{ p: { xs: "1rem", md: "2rem" } }}>
           <Typography variant="h4" color="secondary" sx={{ fontSize: { xs: "1.5rem", md: "2rem" } }}>
             Design
@@ -55,7 +53,6 @@ const PortfolioSite = () => {
           </Typography>
         </Box>
 
-        {/* Theme Changer Section */}
         <Typography 
           variant="h4" 
           color="primary" 
@@ -64,7 +61,6 @@ const PortfolioSite = () => {
           Try some color design yourself!
         </Typography>
 
-        {/* Grid Layout for Theme Changer */}
         <Grid 
           container 
           spacing={2} 
@@ -73,7 +69,7 @@ const PortfolioSite = () => {
             justifyContent: "center", 
             margin: "auto",
             maxWidth: "900px",
-            px: { xs: 2, md: 0 } // Reduce padding on mobile
+            px: { xs: 2, md: 0 }
           }}
         >
           {[

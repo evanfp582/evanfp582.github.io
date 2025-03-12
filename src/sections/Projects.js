@@ -58,25 +58,25 @@ const Projects = () => {
 const projects = [
   {
     "name": "evanfp582.github.io", 
-    "description": "This project here. An interractive and fun website to teach people about myself and my projects",
+    "description": "This project here. An interactive and fun website to teach people about myself and my projects",
     "link": "https://github.com/evanfp582/evanfp582.github.io",
     "project_link": "/#/portfolio_website"
   },
   {
     "name": "Image2JSON", 
-    "description": "Brickhack X Project to turn images into JSON objects",
+    "description": "Brickhack X project to turn images into JSON objects",
     "link": "https://github.com/evanfp582/Image2JSON",
     "project_link": "/#/Image2JSON"
   },
   {
     "name": "play-thentication", 
-    "description": "Brickhack 11 Project to authenticate users by playing a silly game",
+    "description": "Brickhack 11 project to authenticate users by playing a silly game",
     "link": "https://github.com/evanfp582/play-thentication",
     "project_link": "/#/Playthentication"
   },
   {
     "name": "BartenderWebsite", 
-    "description": "A Bartender Website using MERN stack that can recommend drinks depending on a user's available ingredients. Web scraping stuff is written in Python and was used to initially fill up the database with recipes.",
+    "description": "A Bartender Website that can recommend drinks depending on a user's available ingredients",
     "link": "https://github.com/ryanmurf9/BartenderWebsite",
     "project_link": "/#/BartenderWebsite"
   },
@@ -87,8 +87,8 @@ const projects = [
     "project_link": "/#/DiscordBots"
   },
   {
-    "name": "todo_list_rust", 
-    "description": "Learning rust by making a todo list",
+    "name": "todo_list_rust (W.I.P)", 
+    "description": "Learning Rust language by making a todo list.",
     "link": "https://github.com/evanfp582/todo_list_rust",
     "project_link": "/#/TodoListRust"
   },
