@@ -43,6 +43,10 @@ Learn new tech for making rad looking websites
 - [x] Add cool animation in home.js. I was thinking a faint binary hover background 
 - [ ] Add interesting way for users to view resume data
 
+## Phase X This is a living project, I need to keep it up to date
+- [x] Add homebase  
+- [ ] Add interactive demo about what the project is and what it will be  
+
 ## Known Bugs
 - [x] When changing theme in interactive demo, theme vanishes
 - [x] Fix links to look distinctive and add more internal links 

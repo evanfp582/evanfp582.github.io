@@ -18,6 +18,7 @@ import Playthentication from "./project_files/Playthentication";
 import DiscordBots from "./project_files/DiscordBots";
 import TodoListRust from "./project_files/TodoListRust";
 import FadeInSection from "./components/FadeInSection";
+import Homebase from "./project_files/homebase";
 
 export const ThemeContext = createContext();
 
@@ -96,6 +97,14 @@ function App() {
                 <Projects />
                 <Footer />
               </FadeInSection>
+              </>
+            } />
+            <Route path="/homebase" element={<>
+              <Navbar /> 
+              <FadeInSection>
+                <Homebase />
+              </FadeInSection>
+              <Footer />
               </>
             } />
             <Route path="/portfolio_website" element={<>

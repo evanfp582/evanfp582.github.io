@@ -57,6 +57,12 @@ const Projects = () => {
 
 const projects = [
   {
+    "name": "Homebase (W.I.P)", 
+    "description": "A large multi-disciplinary project involving taking an old computer and making it a linux server to host different project and ideas",
+    "link": "https://github.com/evanfp582/homebase",
+    "project_link": "/#/homebase"
+  },
+  {
     "name": "evanfp582.github.io", 
     "description": "This project here. An interactive and fun website to teach people about myself and my projects",
     "link": "https://github.com/evanfp582/evanfp582.github.io",
