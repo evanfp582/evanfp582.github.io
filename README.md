@@ -1,6 +1,13 @@
 # evanfp582.github.io
 Try out GitHub's web hosting and work on my resume website
 
+# How to update this site
+Simply run 
+``` bash
+  npm run deploy
+```  
+so easy and so cool  
+
 ## Goals 
 Get better at web development  
 Get better at web design  
