@@ -19,6 +19,8 @@ import DiscordBots from "./project_files/DiscordBots";
 import TodoListRust from "./project_files/TodoListRust";
 import FadeInSection from "./components/FadeInSection";
 import Homebase from "./project_files/homebase";
+import KotlinTUI from "./project_files/KotlinTUI";
+import Pytorch from "./project_files/Pytorch";
 
 export const ThemeContext = createContext();
 
@@ -97,6 +99,22 @@ function App() {
                 <Projects />
                 <Footer />
               </FadeInSection>
+              </>
+            } />
+            <Route path="/kotlinTUI" element={<>
+              <Navbar /> 
+              <FadeInSection>
+                <KotlinTUI />
+              </FadeInSection>
+              <Footer />
+              </>
+            } />
+            <Route path="/pytorch" element={<>
+              <Navbar /> 
+              <FadeInSection>
+                <Pytorch />
+              </FadeInSection>
+              <Footer />
               </>
             } />
             <Route path="/homebase" element={<>

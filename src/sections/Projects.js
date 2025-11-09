@@ -28,6 +28,7 @@ const Projects = () => {
               </Typography>
               <Box sx={{ display: "flex", gap: "20px" }}>
                 <Button 
+                  disabled={!project.link}
                   variant="contained" 
                   color="primary" 
                   href={project.link} 
@@ -56,6 +57,18 @@ const Projects = () => {
 };
 
 const projects = [
+  {
+    "name": "Kotlin TUI (W.I.P)", 
+    "description": "A terminal user interface made from scratch in kotlin to run on my homebase server",
+    "link": "https://github.com/evanfp582/Kotlin-TUI",
+    "project_link": "/#/kotlinTUI"
+  },
+  {
+    "name": "Pytorch For Deep Learning (W.I.P)", 
+    "description": "A Udemy class to learn all about deep learning from the linear algebra to complex neural networks",
+    "link": "",
+    "project_link": "/#/pytorch"
+  },
   {
     "name": "Homebase (W.I.P)", 
     "description": "A large multi-disciplinary project involving taking an old computer and making it a linux server to host different project and ideas",
