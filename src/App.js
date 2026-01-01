@@ -9,6 +9,7 @@ import Home from "./sections/Home";
 import Resume from "./sections/Resume";
 import Separator from "./components/Separator";
 import Projects from "./sections/Projects";
+import DevLog from "./sections/DevLogs"
 import About from "./sections/About"
 import PortfolioSite from "./project_files/PortfolioSite";
 import Image2Json from "./project_files/Image2Json";
@@ -21,6 +22,7 @@ import FadeInSection from "./components/FadeInSection";
 import Homebase from "./project_files/homebase";
 import KotlinTUI from "./project_files/KotlinTUI";
 import Pytorch from "./project_files/Pytorch";
+import DevLogPost from "./components/DevLogPost";
 
 export const ThemeContext = createContext();
 
@@ -70,6 +72,8 @@ function App() {
     },
   });
 
+  const devLogs = ["Kotlin-TUILogs", "this_is_a_test"]
+
   return (
     <ThemeContext.Provider value={{ 
       setPrimaryColor, primaryColor,
@@ -97,6 +101,10 @@ function App() {
               </FadeInSection>
               <FadeInSection>
                 <Projects />
+                <Separator />
+              </FadeInSection>
+              <FadeInSection>
+                <DevLog files={devLogs}/>
                 <Footer />
               </FadeInSection>
               </>
@@ -173,6 +181,16 @@ function App() {
               <Footer />
               </>
             } />
+            {devLogs.map((file, index) => (
+              <Route path={`/${file}`} element={<>
+                <Navbar /> 
+                <FadeInSection>
+                  <DevLogPost file={`${file}.md`} />
+                </FadeInSection>
+                <Footer />
+                </>
+              } />
+            ))}
           </Routes>
         </ThemeProvider>
       </HashRouter>

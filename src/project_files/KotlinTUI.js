@@ -48,7 +48,7 @@ const KotlinTUI = () => {
       <Typography color="text.secondary" sx={bodyStyle}>
         I think the future of this project is super exciting! <br />
         I have a whole TODO list on the README for the Kotlin TUI so check that out if you are interested <br />
-        I also have a little dev blog type thing in the README, I might make that into a bigger thing I am not sure.
+        I also have a little dev DevLog type thing in the README, I might make that into a bigger thing I am not sure.
       </Typography>
     </Box>
   </>

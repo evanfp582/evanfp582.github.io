@@ -7,7 +7,7 @@ function Footer() {
       <Toolbar>
         <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
           <Typography variant="body1" color="text.header">
-            © 2025 Evan Fisher-Perez's Portfolio Website
+            © 2026 Evan Fisher-Perez's Portfolio Website
           </Typography>
         </Box>
       </Toolbar>
