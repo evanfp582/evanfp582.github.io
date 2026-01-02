@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkevanfp582_github_io=self.webpackChunkevanfp582_github_io||[]).push([[885],{885:(e,a,i)=>{e.exports=i.p+"static/media/Kotlin-TUILogs.2b4f549748a2339a8c30.md"}}]);
