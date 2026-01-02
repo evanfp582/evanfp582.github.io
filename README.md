@@ -64,3 +64,12 @@ Learn new tech for making rad looking websites
 
 ## Design Thoughts
 Is there a better way of displaying text in the interactive portfolio website
+
+## Dev logs 
+A place to store some idea, thought, and feelings. More of a diary than anything to be taken academically or seriously.  
+Currently everything is manual, but I think it would be cool if it was automatic.
+Steps to upload a blog
+1. Put the markdown file in src/devLogs
+2. Add the name of the file (without .md to line 75 of App.js)
+3. Git add and push
+4. Deploy with `npm run deploy`

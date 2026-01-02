@@ -72,7 +72,7 @@ function App() {
     },
   });
 
-  const devLogs = ["Kotlin-TUILogs", "this_is_a_test"]
+  const devLogs = ["for_2026", "Kotlin-TUILogs", "this_is_a_test"]
 
   return (
     <ThemeContext.Provider value={{ 
