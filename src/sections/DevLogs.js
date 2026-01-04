@@ -18,29 +18,36 @@ const DevLog = ({files}) => {
           Evan Fisher-Perez Dev Logs!
         </Typography>
       </Box>
-
+      
+      <Grid container justifyContent="center" spacing={4} sx={{ padding: "4rem" }}>
       {files.map((file, index) => (
-        <Card key={index} sx={{ padding: "4rem" }}>
+        <Card key={index} sx={{margin: "10px", padding:"10px", width:"75%" }}>
           <CardContent>
-            <Typography variant="h5" sx={{ fontWeight: "bold", textAlign: "center" }}>
-              {file}
-            </Typography>
-            {/* <Typography color="text.secondary" sx={{ marginBottom: 2, fontSize: "20px" }}>
-              {project.description}
-            </Typography> */}
-            <Box sx={{ display: "flex", gap: "20px" }}>
-              <Button 
-                variant="contained" 
-                color="primary" 
-                href={"/#/"+file}
+           <Grid container alignItems="center">
+            <Grid>
+              <Typography variant="h3" sx={{ fontWeight: "bold" }}>
+                {file.title}
+              </Typography>
+              <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
+                {file.date}
+              </Typography>
+            </Grid>
+
+            <Grid sx={{ marginLeft: "auto" }}>
+              <Button
+                variant="contained"
+                color="primary"
+                href={`/#/${file.title}`}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Read
               </Button>
-            </Box>
+            </Grid>
+          </Grid>
           </CardContent>
         </Card>
       ))}
+      </Grid>
     </Box>
   );
 };

@@ -72,7 +72,7 @@ function App() {
     },
   });
 
-  const devLogs = ["for_2026", "Kotlin-TUILogs", "this_is_a_test"]
+  const devLogs = [{"title": "for_2026", "date": "January 1st 2026"}, {"title": "Kotlin-TUILogs", "date": "December 1st 2025"}, {"title": "this_is_a_test", "date": "November 1st 2025"}]
 
   return (
     <ThemeContext.Provider value={{ 
@@ -182,10 +182,10 @@ function App() {
               </>
             } />
             {devLogs.map((file, index) => (
-              <Route path={`/${file}`} element={<>
+              <Route path={`/${file.title}`} element={<>
                 <Navbar /> 
                 <FadeInSection>
-                  <DevLogPost file={`${file}.md`} />
+                  <DevLogPost file={`${file.title}.md`} />
                 </FadeInSection>
                 <Footer />
                 </>
