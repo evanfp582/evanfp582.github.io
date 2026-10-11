@@ -58,16 +58,16 @@ const Projects = () => {
 
 const projects = [
   {
+    "name": "BashJack", 
+    "description": "TUI Game of BlackJack made in Bash!",
+    "link": "https://github.com/evanfp582/BashJack",
+    "project_link": "/#/BashJack"
+  },
+  {
     "name": "Kotlin TUI (W.I.P)", 
     "description": "A terminal user interface made from scratch in kotlin to run on my homebase server",
     "link": "https://github.com/evanfp582/Kotlin-TUI",
     "project_link": "/#/kotlinTUI"
-  },
-  {
-    "name": "Pytorch For Deep Learning (W.I.P)", 
-    "description": "A Udemy class to learn all about deep learning from the linear algebra to complex neural networks",
-    "link": "",
-    "project_link": "/#/pytorch"
   },
   {
     "name": "Homebase (W.I.P)", 
@@ -111,6 +111,12 @@ const projects = [
     "link": "https://github.com/evanfp582/todo_list_rust",
     "project_link": "/#/TodoListRust"
   },
+  {
+    "name": "Pytorch For Deep Learning (W.I.P)", 
+    "description": "A Udemy class to learn all about deep learning from the linear algebra to complex neural networks",
+    "link": "",
+    "project_link": "/#/pytorch"
+  }
 ]
 
 export default Projects;

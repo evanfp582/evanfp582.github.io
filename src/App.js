@@ -20,6 +20,7 @@ import DiscordBots from "./project_files/DiscordBots";
 import TodoListRust from "./project_files/TodoListRust";
 import FadeInSection from "./components/FadeInSection";
 import Homebase from "./project_files/homebase";
+import BashJack from "./project_files/BashJack";
 import KotlinTUI from "./project_files/KotlinTUI";
 import Pytorch from "./project_files/Pytorch";
 import DevLogPost from "./components/DevLogPost";
@@ -107,6 +108,14 @@ function App() {
                 <DevLog files={devLogs}/>
                 <Footer />
               </FadeInSection>
+              </>
+            } />
+            <Route path="/BashJack" element={<>
+              <Navbar /> 
+              <FadeInSection>
+                <BashJack />
+              </FadeInSection>
+              <Footer />
               </>
             } />
             <Route path="/kotlinTUI" element={<>

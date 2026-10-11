@@ -41,7 +41,7 @@ const Resume = () => {
         }}
       >
         <embed
-          src="/images/EvanFisherPerezResumeV2.pdf"
+          src="/images/EvanFisherPerezResumeV3.pdf"
           type="application/pdf"
           width="100%"
           height="100%"
@@ -49,7 +49,7 @@ const Resume = () => {
       </Box>
 
       <Link
-        href="/images/EvanFisherPerezResumeV2.pdf"
+        href="/images/EvanFisherPerezResumeV3.pdf"
         download="EvanFisherPerez_Resume.pdf"
         sx={{
           textDecoration: "none",
